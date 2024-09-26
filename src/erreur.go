@@ -156,13 +156,15 @@ func Erreur() {
 		time.Sleep(1500 * time.Millisecond)
 		if facile {
 			killF++
-		time.Sleep(1500 * time.Millisecond)
-		fmt.Println(" ")
-		fmt.Println("Le nombre de personnes que vous n'avez pas réussi à sauver s'élève désormais à :", "\033[91m",killF,"\033[0m")
-		fmt.Println(" ")
-		time.Sleep(1500 * time.Millisecond)
-		fmt.Println("Votre score retombe de","\033[92m",scoreF,"\033[0m","à 0 !")
-		fmt.Println(" ")
+			time.Sleep(1500 * time.Millisecond)
+			fmt.Println(" ")
+			fmt.Println("Le nombre de personnes que vous n'avez pas réussi à sauver s'élève désormais à :", "\033[91m", killF, "\033[0m")
+			fmt.Println(" ")
+			time.Sleep(1500 * time.Millisecond)
+			fmt.Println("Votre score retombe de","\033[92m",scoreF,"\033[0m","à 0 !")
+			fmt.Println(" ")
+			fmt.Println("Le mot était :", motF)
+			fmt.Println(" ")
 			scoreF = 0
 			facile = false
 		}
@@ -170,10 +172,12 @@ func Erreur() {
 			killM++
 			time.Sleep(1500 * time.Millisecond)
 			fmt.Println(" ")
-			fmt.Println("Le nombre de personnes que vous n'avez pas réussi à sauver s'élève désormais à :", "\033[91m",killM,"\033[0m")
+			fmt.Println("Le nombre de personnes que vous n'avez pas réussi à sauver s'élève désormais à :", "\033[91m", killM, "\033[0m")
 			fmt.Println(" ")
 			time.Sleep(1500 * time.Millisecond)
 			fmt.Println("Votre score retombe de","\033[92m",scoreM,"\033[0m","à 0 !")
+			fmt.Println(" ")
+			fmt.Println("Le mot était :", motM)
 			fmt.Println(" ")
 			scoreM = 0
 			moyen = false
@@ -182,17 +186,19 @@ func Erreur() {
 			killD++
 			time.Sleep(1500 * time.Millisecond)
 			fmt.Println(" ")
-			fmt.Println("Le nombre de personnes que vous n'avez pas réussi à sauver s'élève désormais à :", "\033[91m",killD,"\033[0m")
+			fmt.Println("Le nombre de personnes que vous n'avez pas réussi à sauver s'élève désormais à :", "\033[91m", killD, "\033[0m")
 			fmt.Println(" ")
 			time.Sleep(1500 * time.Millisecond)
 			fmt.Println("Votre score retombe de","\033[92m",scoreD,"\033[0m","à 0 !")
+			fmt.Println(" ")
+			fmt.Println("Le mot était :", motD)
 			fmt.Println(" ")
 			scoreD = 0
 			difficile = false
 		}
 		fmt.Println("Retour au menu principal")
 		fmt.Println(" ")
-		time.Sleep(2000 * time.Millisecond)
+		time.Sleep(5000 * time.Millisecond)
 		erreur = 0
 		ClearTerminal()
 		MenuHangman()

@@ -6,7 +6,7 @@ import (
 )
 
 func Loading() {
-	for t := 0; t < 5; t++ {
+	for t := 0; t < 4; t++ {
 		time.Sleep(200 * time.Millisecond)
 		fmt.Println(" ")
 		fmt.Println("Chargement en cours")

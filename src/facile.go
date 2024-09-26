@@ -6,14 +6,18 @@ import (
 )
 
 var killF = 0
-var pointsF = 0
+var scoreF = 0
 var facile = false
-var lmotF = len(motF)
-var motstockF = make([]string, lmotF)
-var runesF = []rune(motF)
+var runesF []rune
+var motstockF []string
+var pointsF = 0
 
 func Facile() {
+	MotF()
 	facile = true
+	runesF = []rune(motF)
+	lmotF := len(motF)
+	motstockF = make([]string, lmotF)
 	UnderscoreF()
 	Erreur()
 	for !strings.Contains(strings.Join(motstockF, ""), motF) {
@@ -28,7 +32,9 @@ func Facile() {
 			}
 		}
 		if !correcte {
-			fmt.Println("La lettre ne fait pas partie du mot !")
+			fmt.Println(" ")
+			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
+			fmt.Println(" ")
 			erreur++
 			Erreur()
 
@@ -40,13 +46,17 @@ func Facile() {
 	fmt.Println(" ")
 	fmt.Println("Mais ... Auxquels je retire le nombre de vos erreurs ... et ...")
 	fmt.Println(" ")
-	pointsF = (pointsF + 10) - erreur
-	fmt.Println("Vous obtenez :", "\033[92m", pointsF, "\033[0m")
+	pointsF = 10 - erreur
+	scoreF += pointsF
+	fmt.Println("vous obtenez :","\033[92m", pointsF, "\033[0mpoints !")
+	fmt.Println(" ")
+	fmt.Println("Vous avez :","\033[92m", scoreF, "\033[0mpoints !")
 	fmt.Println(" ")
 	fmt.Println(" ")
 	erreur = 0
 	facile = false
-	if pointsF >= limitescore {
+	pointsF = 0
+	if scoreF >= limitescore {
 		Ending()
 	}
 	MenuHangman()

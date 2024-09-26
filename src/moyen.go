@@ -6,15 +6,18 @@ import (
 )
 
 var killM = 0
-var pointsM = 0
+var scoreM = 0
 var moyen = false
-var lmotM = len(motM)
-var motstockM = make([]string, lmotM)
-var runesM = []rune(motM)
+var runesM []rune
+var motstockM []string
+var pointsM = 0
 
 func Moyen() {
-	moyen = true
 	MotM()
+	moyen = true
+	runesM = []rune(motM)
+	lmotM := len(motM)
+	motstockM = make([]string, lmotM)
 	UnderscoreM()
 	Erreur()
 	for !strings.Contains(strings.Join(motstockM, ""), motM) {
@@ -29,7 +32,9 @@ func Moyen() {
 			}
 		}
 		if !correcte {
-			fmt.Println("La lettre ne fait pas partie du mot !")
+			fmt.Println(" ")
+			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
+			fmt.Println(" ")
 			erreur++
 			Erreur()
 
@@ -41,13 +46,17 @@ func Moyen() {
 	fmt.Println(" ")
 	fmt.Println("Mais ... Auxquels je retire le nombre de vos erreurs ... et ...")
 	fmt.Println(" ")
-	pointsM = (pointsM + 12) - erreur
-	fmt.Println("Vous obtenez :", "\033[92m", pointsM, "\033[0m")
+	pointsM = 12 - erreur
+	scoreM += pointsM
+	fmt.Println("vous obtenez :","\033[92m",pointsM,"\033[0mpoints !")
+	fmt.Println(" ")
+	fmt.Println("Vous avez :","\033[92m",scoreM, "\033[0mpoints !")
 	fmt.Println(" ")
 	fmt.Println(" ")
 	erreur = 0
 	moyen = false
-	if pointsM >= limitescore {
+	pointsM = 0
+	if scoreM >= limitescore {
 		Ending()
 	}
 	MenuHangman()

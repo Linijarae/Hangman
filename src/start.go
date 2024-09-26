@@ -43,7 +43,7 @@ func Start() {
 		ClearTerminal()
 		MenuHangman()
 	default:
-		fmt.Println("\033[1mVous n'avez pas l'air de savoir suivre des instructions ... Bon courage pour la suite ...\033[0m")
+		fmt.Println("\033[91m\033[1mVous n'avez pas l'air de savoir suivre des instructions ... Bon courage pour la suite ...\033[0m")
 		time.Sleep(2000 * time.Millisecond)
 		ClearTerminal()
 		MenuHangman()

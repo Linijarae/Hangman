@@ -36,7 +36,7 @@ func MenuHangman() {
 		Quitter()
 	default:
 		fmt.Println(" ")
-		fmt.Println("Aucune fonction de mon jeu ne correspond à votre demande.")
+		fmt.Println("\033[91m\033[1mAucune fonction de mon jeu ne correspond à votre demande.\033[0m")
 		fmt.Println(" ")
 		MenuHangman()
 		return

@@ -20,11 +20,16 @@ func Moyen() {
 	motstockM = make([]string, lmotM)
 	UnderscoreM()
 	Erreur()
+	HelpM()
 	for !strings.Contains(strings.Join(motstockM, ""), motM) {
 		fmt.Println("Le mot actuel : ", strings.Join(motstockM, " "))
 		fmt.Printf("Votre lettre : ")
 		fmt.Scanln(&input)
 		correcte := false
+		if string(runesM) == input {
+			ReussiteM()
+			return
+		}
 		for j, r := range runesM {
 			if string(r) == input {
 				motstockM[j] = input
@@ -40,24 +45,5 @@ func Moyen() {
 
 		}
 	}
-	fmt.Println("Félicitations ! Vous avez deviné le mot :", strings.Join(motstockM, ""))
-	fmt.Println(" ")
-	fmt.Println("Vous obtenez \033[92m12\033[0m points")
-	fmt.Println(" ")
-	fmt.Println("Mais ... Auxquels je retire le nombre de vos erreurs ... et ...")
-	fmt.Println(" ")
-	pointsM = 12 - erreur
-	scoreM += pointsM
-	fmt.Println("vous obtenez :","\033[92m",pointsM,"\033[0mpoints !")
-	fmt.Println(" ")
-	fmt.Println("Vous avez :","\033[92m",scoreM, "\033[0mpoints !")
-	fmt.Println(" ")
-	fmt.Println(" ")
-	erreur = 0
-	moyen = false
-	pointsM = 0
-	if scoreM >= limitescore {
-		Ending()
-	}
-	MenuHangman()
+ReussiteM()
 }

@@ -6,7 +6,6 @@ import (
 )
 
 func Start() {
-	time.Sleep(1000 * time.Millisecond)
 	fmt.Println(" ")
 	fmt.Println("\033[1mVous avez été enlevé, vous êtes attaché sur une chaise, baîlloné.\033[0m")
 	fmt.Println(" ")

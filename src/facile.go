@@ -10,7 +10,7 @@ var scoreF = 0
 var facile = false
 var runesF []rune
 var motstockF []string
-var pointsF = 0
+var pointsF int
 
 func Facile() {
 	MotF()
@@ -18,46 +18,43 @@ func Facile() {
 	runesF = []rune(motF)
 	lmotF := len(motF)
 	motstockF = make([]string, lmotF)
+	var inputstock []string
 	UnderscoreF()
 	Erreur()
+	HelpF()
 	for !strings.Contains(strings.Join(motstockF, ""), motF) {
+		fmt.Println(" ")
 		fmt.Println("Le mot actuel : ", strings.Join(motstockF, " "))
-		fmt.Printf("Votre lettre : ")
+		fmt.Println(" ")
+		fmt.Println("\nVous avez utilisé les lettres :", inputstock)
+		fmt.Println(" ")
 		fmt.Scanln(&input)
 		correcte := false
+		for _, a := range inputstock {
+			if a == input {
+				fmt.Println("Vous avez déjà essayé cette lettre.")
+			}
+		}
+		if string(runesF) == input {
+			ReussiteF()
+			return
+		}
 		for j, r := range runesF {
 			if string(r) == input {
 				motstockF[j] = input
 				correcte = true
+				inputstock = append(inputstock, input)
 			}
 		}
 		if !correcte {
 			fmt.Println(" ")
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
 			fmt.Println(" ")
+			inputstock = append(inputstock, input)
 			erreur++
 			Erreur()
 
 		}
 	}
-	fmt.Println("Félicitations ! Vous avez deviné le mot :", strings.Join(motstockF, ""))
-	fmt.Println(" ")
-	fmt.Println("Vous obtenez \033[92m10\033[0m points")
-	fmt.Println(" ")
-	fmt.Println("Mais ... Auxquels je retire le nombre de vos erreurs ... et ...")
-	fmt.Println(" ")
-	pointsF = 10 - erreur
-	scoreF += pointsF
-	fmt.Println("vous obtenez :","\033[92m", pointsF, "\033[0mpoints !")
-	fmt.Println(" ")
-	fmt.Println("Vous avez :","\033[92m", scoreF, "\033[0mpoints !")
-	fmt.Println(" ")
-	fmt.Println(" ")
-	erreur = 0
-	facile = false
-	pointsF = 0
-	if scoreF >= limitescore {
-		Ending()
-	}
-	MenuHangman()
+	ReussiteF()
 }

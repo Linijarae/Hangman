@@ -5,6 +5,7 @@ import "fmt"
 
 
 func Statistiques() {
+	ClearTerminal()
 	fmt.Println(" ")
 	fmt.Println("\033[4m\033[30m\033[47m     Vos Statistiques :     \033[0m")
 	fmt.Println(" ")
@@ -27,7 +28,7 @@ func Statistiques() {
 	fmt.Scanln(&input1)
 	switch input1 {
 	case "0":
-		fmt.Println(" ")
+		ClearTerminal()
 		MenuHangman()
 		return
 	default:

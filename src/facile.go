@@ -19,6 +19,7 @@ func Facile() {
 	lmotF := len(motF)
 	motstockF = make([]string, lmotF)
 	var inputstock []string
+	var inputstockmot []string
 	UnderscoreF()
 	Erreur()
 	HelpF()
@@ -28,32 +29,45 @@ func Facile() {
 		fmt.Println(" ")
 		fmt.Println("\nVous avez utilisé les lettres :", inputstock)
 		fmt.Println(" ")
+		fmt.Println("\nVous avez tenté les mots :", inputstockmot)
+		fmt.Println(" ")
 		fmt.Scanln(&input)
 		correcte := false
 		for _, a := range inputstock {
 			if a == input {
-				fmt.Println("Vous avez déjà essayé cette lettre.")
+				fmt.Println(" ")
+				fmt.Println("\033[91mVous avez déjà essayé cette lettre.\033[0m")
+				fmt.Println(" ")
 			}
 		}
-		if string(runesF) == input {
+		if motF == input {
 			ReussiteF()
 			return
+		} else if motF != input && len(input) > 1 {
+			fmt.Println(" ")
+			fmt.Println("\033[91mCe n'est pas le bon mot !\033[0m")
+			fmt.Println(" ")
+			erreur += 2
+			redinput := "\033[91m" + input + "\033[0m"
+			inputstockmot = append(inputstockmot, redinput)
+			Erreur()
 		}
 		for j, r := range runesF {
 			if string(r) == input {
 				motstockF[j] = input
 				correcte = true
-				inputstock = append(inputstock, input)
+				greeninput := "\033[92m" + input + "\033[0m"
+				inputstock = append(inputstock, greeninput)
 			}
 		}
-		if !correcte {
+		if !correcte && len(input) == 1{
 			fmt.Println(" ")
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
 			fmt.Println(" ")
-			inputstock = append(inputstock, input)
+			redinput := "\033[91m" + input + "\033[0m"
+			inputstock = append(inputstock, redinput)
 			erreur++
 			Erreur()
-
 		}
 	}
 	ReussiteF()

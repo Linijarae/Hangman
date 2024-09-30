@@ -3,7 +3,7 @@ package Hangman
 import "fmt"
 
 var input string
-var limitescore = 10
+var limitescore = 150
 
 func MenuHangman() {
 	fmt.Println(" ")

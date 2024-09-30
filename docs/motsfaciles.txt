@@ -155,7 +155,6 @@ perruche
 petit
 pirate
 plume
-poisson
 reine
 renne
 requin

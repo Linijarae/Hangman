@@ -46,7 +46,7 @@ func HelpF() {
 		for indice1 == indice2 {
 			indice2 = rand.Intn(lmotF)
 		}
-		for indice1 == indice3 {
+		for indice3 == indice2 || indice3 == indice1 {
 			indice3 = rand.Intn(lmotF)
 		}
 		for i, lettre := range runesF {
@@ -101,7 +101,7 @@ func HelpM() {
 		for indice1 == indice2 {
 			indice2 = rand.Intn(lmotM)
 		}
-		for indice1 == indice3 {
+		for indice3 == indice2 || indice3 == indice1 {
 			indice3 = rand.Intn(lmotM)
 		}
 		for i, lettre := range runesM {
@@ -158,7 +158,7 @@ func HelpD() {
 		if indice1 == indice2 {
 			indice2 = rand.Intn(lmotD)
 		}
-		if indice3 == indice2 || indice3 == indice1{
+		if indice3 == indice2 || indice3 == indice1 {
 			indice3 = rand.Intn(lmotD)
 		}
 		for i, lettre := range runesD {

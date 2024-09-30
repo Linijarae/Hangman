@@ -34,7 +34,7 @@ func MotAleatoireD(motsfaciles string) (string, error) {
 }
 
 func MotD() {
-	motdifficile, err := MotAleatoireD("motsdifficiles.txt")
+	motdifficile, err := MotAleatoireD("docs/motsdifficiles.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

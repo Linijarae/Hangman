@@ -34,7 +34,7 @@ func HelpF() {
 		}
 		motstockF[indice1] = string(runesF[indice1])
 		motstockF[indice2] = string(runesF[indice2])
-	} else if len(motF) < 8 {
+	} else if len(motF) > 8 {
 		rand.Seed(time.Now().UnixNano())
 		lmotF := len(runesF)
 		indice1 := rand.Intn(lmotF)
@@ -89,7 +89,7 @@ func HelpM() {
 		}
 		motstockM[indice1] = string(runesM[indice1])
 		motstockM[indice2] = string(runesM[indice2])
-	} else if len(motF) < 8 {
+	} else if len(motM) > 8 {
 		rand.Seed(time.Now().UnixNano())
 		lmotM := len(runesM)
 		indice1 := rand.Intn(lmotM)
@@ -146,7 +146,7 @@ func HelpD() {
 		}
 		motstockD[indice1] = string(runesD[indice1])
 		motstockD[indice2] = string(runesD[indice2])
-	} else if len(motF) < 8 {
+	} else if len(motD) > 8 {
 		rand.Seed(time.Now().UnixNano())
 		lmotD := len(runesD)
 		indice1 := rand.Intn(lmotD)
@@ -155,10 +155,10 @@ func HelpD() {
 		lettre1 := runesD[indice1]
 		lettre2 := runesD[indice2]
 		lettre3 := runesD[indice3]
-		for indice1 == indice2 {
+		if indice1 == indice2 {
 			indice2 = rand.Intn(lmotD)
 		}
-		for indice1 == indice3 {
+		if indice3 == indice2 || indice3 == indice1{
 			indice3 = rand.Intn(lmotD)
 		}
 		for i, lettre := range runesD {

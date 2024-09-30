@@ -3,6 +3,7 @@ package Hangman
 import (
 	"fmt"
 	"strings"
+	"time"
 )
 
 var killF = 0
@@ -21,15 +22,16 @@ func Facile() {
 	var inputstock []string
 	var inputstockmot []string
 	UnderscoreF()
-	Erreur()
 	HelpF()
 	for !strings.Contains(strings.Join(motstockF, ""), motF) {
+		ClearTerminal()
+		Erreur()
 		fmt.Println(" ")
-		fmt.Println("Le mot actuel : ", strings.Join(motstockF, " "))
+		fmt.Println("\033[4m\033[93mLe mot actuel :\033[0m", strings.Join(motstockF, " "))
 		fmt.Println(" ")
-		fmt.Println("\nVous avez utilisé les lettres :", inputstock)
+		fmt.Println("\033[4m\033[93mVous avez utilisé les lettres :\033[0m", inputstock)
 		fmt.Println(" ")
-		fmt.Println("\nVous avez tenté les mots :", inputstockmot)
+		fmt.Println("\033[4m\033[93mVous avez tenté les mots :\033[0m", inputstockmot)
 		fmt.Println(" ")
 		fmt.Scanln(&input)
 		correcte := false
@@ -38,6 +40,8 @@ func Facile() {
 				fmt.Println(" ")
 				fmt.Println("\033[91mVous avez déjà essayé cette lettre.\033[0m")
 				fmt.Println(" ")
+				time.Sleep(2000 * time.Millisecond)
+				break
 			}
 		}
 		if motF == input {
@@ -47,10 +51,10 @@ func Facile() {
 			fmt.Println(" ")
 			fmt.Println("\033[91mCe n'est pas le bon mot !\033[0m")
 			fmt.Println(" ")
+			time.Sleep(2000 * time.Millisecond)
 			erreur += 2
 			redinput := "\033[91m" + input + "\033[0m"
 			inputstockmot = append(inputstockmot, redinput)
-			Erreur()
 		}
 		for j, r := range runesF {
 			if string(r) == input {
@@ -60,15 +64,16 @@ func Facile() {
 				inputstock = append(inputstock, greeninput)
 			}
 		}
-		if !correcte && len(input) == 1{
+		if !correcte && len(input) == 1 {
 			fmt.Println(" ")
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
 			fmt.Println(" ")
+			time.Sleep(2000 * time.Millisecond)
 			redinput := "\033[91m" + input + "\033[0m"
 			inputstock = append(inputstock, redinput)
 			erreur++
-			Erreur()
 		}
+
 	}
 	ReussiteF()
 }

@@ -2,11 +2,13 @@ package Hangman
 
 import (
 	"fmt"
+	"time"
 )
 
 func ReussiteF() {
+	ClearTerminal()
 	fmt.Println(" ")
-	fmt.Println("Félicitations ! Vous avez deviné le mot :",motF)
+	fmt.Println("Félicitations ! Vous avez deviné le mot :", motF)
 	fmt.Println(" ")
 	fmt.Println("Vous obtenez \033[92m10\033[0m points")
 	fmt.Println(" ")
@@ -25,12 +27,19 @@ func ReussiteF() {
 	if scoreF >= limitescore {
 		Ending()
 	}
+	time.Sleep(5000 * time.Millisecond)
+	fmt.Println(" ")
+	fmt.Println("Retour au menu principal.")
+	fmt.Println(" ")
+	time.Sleep(2000 * time.Millisecond)
+	ClearTerminal()
 	MenuHangman()
 }
 
 func ReussiteM() {
+	ClearTerminal()
 	fmt.Println(" ")
-	fmt.Println("Félicitations ! Vous avez deviné le mot :",motM)
+	fmt.Println("Félicitations ! Vous avez deviné le mot :", motM)
 	fmt.Println(" ")
 	fmt.Println("Vous obtenez \033[92m12\033[0m points")
 	fmt.Println(" ")
@@ -49,10 +58,17 @@ func ReussiteM() {
 	if scoreM >= limitescore {
 		Ending()
 	}
+	time.Sleep(5000 * time.Millisecond)
+	fmt.Println(" ")
+	fmt.Println("Retour au menu principal.")
+	fmt.Println(" ")
+	time.Sleep(2000 * time.Millisecond)
+	ClearTerminal()
 	MenuHangman()
 }
 
 func ReussiteD() {
+	ClearTerminal()
 	fmt.Println(" ")
 	fmt.Println("Félicitations ! Vous avez deviné le mot :", motD)
 	fmt.Println(" ")
@@ -73,5 +89,11 @@ func ReussiteD() {
 	if scoreD >= limitescore {
 		Ending()
 	}
+	time.Sleep(5000 * time.Millisecond)
+	fmt.Println(" ")
+	fmt.Println("Retour au menu principal.")
+	fmt.Println(" ")
+	time.Sleep(2000 * time.Millisecond)
+	ClearTerminal()
 	MenuHangman()
 }

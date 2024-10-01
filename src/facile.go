@@ -21,9 +21,11 @@ func Facile() {
 	motstockF = make([]string, lmotF)
 	var inputstock []string
 	var inputstockmot []string
+	dejafait := false
 	UnderscoreF()
 	HelpF()
 	for !strings.Contains(strings.Join(motstockF, ""), motF) {
+		dejafait = false
 		ClearTerminal()
 		Erreur()
 		fmt.Println(" ")
@@ -35,11 +37,14 @@ func Facile() {
 		fmt.Println(" ")
 		fmt.Scanln(&input)
 		correcte := false
+		redinput := "\033[91m" + input + "\033[0m"
+		greeninput := "\033[92m" + input + "\033[0m"
 		for _, a := range inputstock {
-			if a == input {
+			if a == redinput || a == greeninput {
 				fmt.Println(" ")
 				fmt.Println("\033[91mVous avez déjà essayé cette lettre.\033[0m")
 				fmt.Println(" ")
+				dejafait = true
 				time.Sleep(1500 * time.Millisecond)
 				break
 			}
@@ -53,27 +58,23 @@ func Facile() {
 			fmt.Println(" ")
 			time.Sleep(1500 * time.Millisecond)
 			erreur += 2
-			redinput := "\033[91m" + input + "\033[0m"
 			inputstockmot = append(inputstockmot, redinput)
 		}
 		for j, r := range runesF {
-			if string(r) == input {
+			if string(r) == input && !dejafait {
 				motstockF[j] = input
 				correcte = true
-				greeninput := "\033[92m" + input + "\033[0m"
 				inputstock = append(inputstock, greeninput)
 			}
 		}
-		if !correcte && len(input) == 1 {
+		if !correcte && len(input) == 1 && !dejafait {
 			fmt.Println(" ")
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
 			fmt.Println(" ")
 			time.Sleep(1500 * time.Millisecond)
-			redinput := "\033[91m" + input + "\033[0m"
 			inputstock = append(inputstock, redinput)
 			erreur++
 		}
-
 	}
 	ReussiteF()
 }

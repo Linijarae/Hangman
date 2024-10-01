@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 )
-
+//variable du nombre kill en facile
 var killF = 0
 var scoreF = 0
 var facile = false

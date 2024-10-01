@@ -5,6 +5,7 @@ import "fmt"
 var input string
 var limitescore = 150
 
+//Menu du jeu
 func MenuHangman() {
 	fmt.Println(" ")
 	fmt.Println("\033[4m\033[30m\033[47m      Séléctionnez votre niveau :      \033[0m")

@@ -11,6 +11,7 @@ import (
 
 var motF string
 
+//Séléction d'un mot aléatoire facile
 func MotAleatoireF(motsfaciles string) (string, error) {
 	file, err := os.Open(motsfaciles)
 	if err != nil {
@@ -33,6 +34,7 @@ func MotAleatoireF(motsfaciles string) (string, error) {
 	return mots[randomIndex], nil
 }
 
+// Assignation à une variable du mot facile
 func MotF() {
 	motfacile, err := MotAleatoireF("docs/motsfaciles.txt")
 	if err != nil {

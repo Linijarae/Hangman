@@ -2,6 +2,7 @@ package Hangman
 
 import "fmt"
 
+// Ecran blanc pour éblouir le joueur quand il revoit la lumière de l'extérieur
 func Flashbang() {
 	fmt.Println("\033[47m                                                                                                                         ")
 	fmt.Println("                                                                                                                         ")

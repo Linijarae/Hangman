@@ -13,6 +13,7 @@ var runesF []rune
 var motstockF []string
 var pointsF int
 
+//Mode de jeu Facile avec un mot de la liste Facile
 func Facile() {
 	MotF()
 	facile = true

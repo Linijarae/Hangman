@@ -11,8 +11,9 @@ import (
 
 var motD string
 
-func MotAleatoireD(motsfaciles string) (string, error) {
-	file, err := os.Open(motsfaciles)
+//Séléction d'un mot aléatoire difficile
+func MotAleatoireD(motsdifficile string) (string, error) {
+	file, err := os.Open(motsdifficile)
 	if err != nil {
 		return "", err
 	}
@@ -32,7 +33,7 @@ func MotAleatoireD(motsfaciles string) (string, error) {
 	randomIndex := rand.Intn(len(words))
 	return words[randomIndex], nil
 }
-
+// Assignation à une variable du mot difficile
 func MotD() {
 	motdifficile, err := MotAleatoireD("docs/motsdifficiles.txt")
 	if err != nil {

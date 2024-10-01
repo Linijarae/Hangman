@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Mot facile trouvé
 func ReussiteF() {
 	ClearTerminal()
 	fmt.Println(" ")
@@ -36,6 +37,7 @@ func ReussiteF() {
 	MenuHangman()
 }
 
+// Mot moyen trouvé
 func ReussiteM() {
 	ClearTerminal()
 	fmt.Println(" ")
@@ -67,6 +69,7 @@ func ReussiteM() {
 	MenuHangman()
 }
 
+// Mot difficile trouvé
 func ReussiteD() {
 	ClearTerminal()
 	fmt.Println(" ")

@@ -7,6 +7,7 @@ import (
 
 var killtotal = 0
 
+//Fin du jeu en cas d'arrivée à 150 points
 func Ending() {
 	killtotal = killF + killM + killD
 	fmt.Println(" ")

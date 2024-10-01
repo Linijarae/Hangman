@@ -13,6 +13,7 @@ var runesD []rune
 var motstockD []string
 var scoreD = 0
 
+//Mode de jeu Difficile avec un mot de la liste Difficile
 func Difficile() {
 	MotD()
 	difficile = true
@@ -76,5 +77,5 @@ func Difficile() {
 			erreur++
 		}
 	}
-
+ReussiteD()
 }

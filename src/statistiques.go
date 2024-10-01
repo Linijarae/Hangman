@@ -3,7 +3,7 @@ package Hangman
 import "fmt"
 
 
-
+//Statistiques de chaque difficultées
 func Statistiques() {
 	ClearTerminal()
 	fmt.Println(" ")

@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 )
-
+//Affichage de lettres en fonction de la taille du mot pour le mot Facile
 func HelpF() {
 	if len(motF) <= 5 {
 		rand.Seed(time.Now().UnixNano())
@@ -60,6 +60,7 @@ func HelpF() {
 	}
 }
 
+//Affichage de lettres en fonction de la taille du mot pour le mot Moyen
 func HelpM() {
 	if len(motM) <= 5 {
 		rand.Seed(time.Now().UnixNano())
@@ -117,6 +118,7 @@ func HelpM() {
 
 }
 
+//Affichage de lettres en fonction de la taille du mot pour le mot Difficile
 func HelpD() {
 	if len(motD) <= 5 {
 		rand.Seed(time.Now().UnixNano())

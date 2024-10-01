@@ -13,6 +13,7 @@ var runesM []rune
 var motstockM []string
 var pointsM = 0
 
+//Mode de jeu Moyen avec un mot de la liste Moyen
 func Moyen() {
 	MotM()
 	moyen = true
@@ -67,7 +68,7 @@ func Moyen() {
 				inputstock = append(inputstock, greeninput)
 			}
 		}
-		if !correcte && len(input) == 1 && !dejafait {
+		if !correcte && len(input) == 1 && !dejafait{
 			fmt.Println(" ")
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
 			fmt.Println(" ")

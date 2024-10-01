@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+//Debut du jeu
 func Start() {
 	fmt.Println(" ")
 	fmt.Println("\033[47m\033[30m                        S U S P E N S I O N S                       \033[0m")

@@ -7,6 +7,7 @@ import (
 
 var erreur int
 
+//Progression du pendu en fonction du nombre d'erreurs
 func Erreur() {
 	if erreur == 0 {
 		fmt.Println(" ")

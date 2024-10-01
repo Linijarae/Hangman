@@ -6,6 +6,7 @@ import (
 	"runtime"
 )
 
+//Clear le terminal
 func ClearTerminal() {
 	if runtime.GOOS == "windows" {
 		cmd := exec.Command("cmd", "/c", "cls")

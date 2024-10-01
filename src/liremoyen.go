@@ -11,6 +11,7 @@ import (
 
 var motM string
 
+//Séléction d'un mot aléatoire moyen
 func MotAleatoireM(motsmoyens string) (string, error) {
 	file, err := os.Open(motsmoyens)
 	if err != nil {
@@ -33,6 +34,7 @@ func MotAleatoireM(motsmoyens string) (string, error) {
 	return words[randomIndex], nil
 }
 
+// Assignation à une variable du mot moyen
 func MotM() {
 	motmoyen, err := MotAleatoireM("docs/motsmoyens.txt")
 	if err != nil {

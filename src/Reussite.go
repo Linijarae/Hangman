@@ -100,3 +100,35 @@ func ReussiteD() {
 	ClearTerminal()
 	MenuHangman()
 }
+
+// Mot Long trouvé
+func ReussiteL() {
+	ClearTerminal()
+	fmt.Println(" ")
+	fmt.Println("Félicitations ! Vous avez deviné le mot :", mot)
+	fmt.Println(" ")
+	fmt.Println("Vous obtenez \033[92m25\033[0m points")
+	fmt.Println(" ")
+	fmt.Println("Mais ... Auxquels je retire le nombre de vos erreurs ... et ...")
+	fmt.Println(" ")
+	pointsL = 25 - erreur
+	scoreL += pointsL
+	fmt.Println("vous obtenez :", "\033[92m", pointsL, "\033[0mpoints !")
+	fmt.Println(" ")
+	fmt.Println("Vous avez :", "\033[92m", scoreL, "\033[0mpoints !")
+	fmt.Println(" ")
+	fmt.Println(" ")
+	motslongs = false
+	erreur = 0
+	pointsL = 0
+	if scoreL >= limitescore {
+		Ending()
+	}
+	time.Sleep(5000 * time.Millisecond)
+	fmt.Println(" ")
+	fmt.Println("Retour au menu principal.")
+	fmt.Println(" ")
+	time.Sleep(2000 * time.Millisecond)
+	ClearTerminal()
+	MenuHangman()
+}

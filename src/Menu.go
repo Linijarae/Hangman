@@ -16,8 +16,10 @@ func MenuHangman() {
 	fmt.Println(" ")
 	fmt.Println("3.- \033[91mDifficile\033[0m")
 	fmt.Println(" ")
+	fmt.Println("4.- \033[91m\033[95mListes spéciales\033[0m")
 	fmt.Println(" ")
-	fmt.Println("4.- \033[96mVos Statistiques \033[0m")
+	fmt.Println(" ")
+	fmt.Println("5.- \033[96mVos Statistiques \033[0m")
 	fmt.Println(" ")
 	fmt.Println(" ")
 	fmt.Println("\033[4m\033[30m\033[47m              0.- Quitter              \033[0m")
@@ -35,6 +37,8 @@ func MenuHangman() {
 		difficile = true
 		Pendu()
 	case "4":
+		Special()
+	case "5":
 		Statistiques()
 	case "0":
 		Quitter()

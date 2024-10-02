@@ -6,15 +6,19 @@ import (
 	"time"
 )
 
-//Si le joueur à choisi facile, facile passe en true
+// Si le joueur à choisi facile, facile passe en true
 var facile = false
-//Si le joueur à choisi moyen, moyen passe en true
+
+// Si le joueur à choisi moyen, moyen passe en true
 var moyen = false
-//Si le joueur à choisi difficile, difficile passe en true
+
+// Si le joueur à choisi difficile, difficile passe en true
 var difficile = false
+
+// Si le joueur à choisi les mots longs, motslongs passe en true
+var motslongs = false
 var runes []rune
 var motstock []string
-
 
 // Mode de jeu Facile avec un mot de la liste Facile
 func Pendu() {
@@ -25,6 +29,8 @@ func Pendu() {
 		MotM()
 	} else if difficile {
 		MotD()
+	} else if motslongs {
+		MotLong()
 	}
 	runes = []rune(mot)
 	lmot := len(mot)
@@ -74,6 +80,8 @@ func Pendu() {
 				ReussiteM()
 			} else if difficile {
 				ReussiteD()
+			} else if motslongs {
+				ReussiteL()
 			}
 			return
 			// Le mot ( supérieur à 2 lettres ) entré par l'utilisateur ne correspond pas au mot recherché
@@ -101,7 +109,7 @@ func Pendu() {
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
 			fmt.Println(" ")
 			time.Sleep(1500 * time.Millisecond)
-			//Ajout de la lettre rouge (car incorrecte) dans le stock de lettre 
+			//Ajout de la lettre rouge (car incorrecte) dans le stock de lettre
 			inputstock = append(inputstock, redinput)
 			//Incrémentation des erreurs
 			erreur++
@@ -114,5 +122,7 @@ func Pendu() {
 		ReussiteM()
 	} else if difficile {
 		ReussiteD()
+	} else if motslongs {
+		ReussiteL()
 	}
 }

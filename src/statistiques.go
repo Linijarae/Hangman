@@ -2,7 +2,15 @@ package Hangman
 
 import "fmt"
 
-
+var killF = 0
+var scoreF = 0
+var pointsF int
+var killM = 0
+var scoreM = 0
+var pointsM int
+var killD = 0
+var scoreD = 0
+var pointsD int
 //Statistiques de chaque difficultées
 func Statistiques() {
 	ClearTerminal()

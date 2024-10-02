@@ -164,7 +164,7 @@ func Erreur() {
 			time.Sleep(1500 * time.Millisecond)
 			fmt.Println("\033[1mVotre score retombe de", "\033[92m", scoreF, "\033[0m", "\033[1mà 0 !\033[0m")
 			fmt.Println(" ")
-			fmt.Println("\033[1mLe mot était :", motF, "\033[0m")
+			fmt.Println("\033[1mLe mot était :", mot, "\033[0m")
 			fmt.Println(" ")
 			scoreF = 0
 			facile = false
@@ -178,7 +178,7 @@ func Erreur() {
 			time.Sleep(1500 * time.Millisecond)
 			fmt.Println("\033[1mVotre score retombe de", "\033[92m", scoreM, "\033[0m", "\033[1mà 0 !\033[0m")
 			fmt.Println(" ")
-			fmt.Println("\033[1mLe mot était :", motM, "\033[0m")
+			fmt.Println("\033[1mLe mot était :", mot, "\033[0m")
 			fmt.Println(" ")
 			scoreM = 0
 			moyen = false
@@ -192,7 +192,7 @@ func Erreur() {
 			time.Sleep(1500 * time.Millisecond)
 			fmt.Println("\033[1mVotre score retombe de", "\033[92m", scoreD, "\033[0m", "\033[1mà 0 !\033[0m")
 			fmt.Println(" ")
-			fmt.Println("\033[1mLe mot était :", motD, "\033[0m")
+			fmt.Println("\033[1mLe mot était :", mot, "\033[0m")
 			fmt.Println(" ")
 			scoreD = 0
 			difficile = false

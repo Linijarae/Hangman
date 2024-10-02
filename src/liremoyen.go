@@ -9,7 +9,6 @@ import (
 	"time"
 )
 
-var motM string
 
 //Séléction d'un mot aléatoire moyen
 func MotAleatoireM(motsmoyens string) (string, error) {
@@ -40,5 +39,5 @@ func MotM() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	motM = motmoyen
+	mot = motmoyen
 }

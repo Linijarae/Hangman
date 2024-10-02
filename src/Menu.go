@@ -26,11 +26,14 @@ func MenuHangman() {
 	fmt.Scanln(&input1)
 	switch input1 {
 	case "1":
-		Facile()
+		facile = true
+		Pendu()
 	case "2":
-		Moyen()
+		moyen = true
+		Pendu()
 	case "3":
-		Difficile()
+		difficile = true
+		Pendu()
 	case "4":
 		Statistiques()
 	case "0":

@@ -9,7 +9,6 @@ import (
 	"time"
 )
 
-var motD string
 
 //Séléction d'un mot aléatoire difficile
 func MotAleatoireD(motsdifficile string) (string, error) {
@@ -39,5 +38,5 @@ func MotD() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	motD = motdifficile
+	mot = motdifficile
 }

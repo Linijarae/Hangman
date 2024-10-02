@@ -9,7 +9,7 @@ import (
 func ReussiteF() {
 	ClearTerminal()
 	fmt.Println(" ")
-	fmt.Println("Félicitations ! Vous avez deviné le mot :", motF)
+	fmt.Println("Félicitations ! Vous avez deviné le mot :", mot)
 	fmt.Println(" ")
 	fmt.Println("Vous obtenez \033[92m10\033[0m points")
 	fmt.Println(" ")
@@ -41,7 +41,7 @@ func ReussiteF() {
 func ReussiteM() {
 	ClearTerminal()
 	fmt.Println(" ")
-	fmt.Println("Félicitations ! Vous avez deviné le mot :", motM)
+	fmt.Println("Félicitations ! Vous avez deviné le mot :", mot)
 	fmt.Println(" ")
 	fmt.Println("Vous obtenez \033[92m12\033[0m points")
 	fmt.Println(" ")
@@ -73,7 +73,7 @@ func ReussiteM() {
 func ReussiteD() {
 	ClearTerminal()
 	fmt.Println(" ")
-	fmt.Println("Félicitations ! Vous avez deviné le mot :", motD)
+	fmt.Println("Félicitations ! Vous avez deviné le mot :", mot)
 	fmt.Println(" ")
 	fmt.Println("Vous obtenez \033[92m15\033[0m points")
 	fmt.Println(" ")

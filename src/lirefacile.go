@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-var motF string
+var mot string
 
 //Séléction d'un mot aléatoire facile
 func MotAleatoireF(motsfaciles string) (string, error) {
@@ -40,5 +40,5 @@ func MotF() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	motF = motfacile
+	mot = motfacile
 }

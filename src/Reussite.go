@@ -132,3 +132,35 @@ func ReussiteL() {
 	ClearTerminal()
 	MenuHangman()
 }
+
+// Mot Medecine trouvé
+func ReussiteMed() {
+	ClearTerminal()
+	fmt.Println(" ")
+	fmt.Println("Félicitations ! Vous avez deviné le mot :", mot)
+	fmt.Println(" ")
+	fmt.Println("Vous obtenez \033[92m25\033[0m points")
+	fmt.Println(" ")
+	fmt.Println("Mais ... Auxquels je retire le nombre de vos erreurs ... et ...")
+	fmt.Println(" ")
+	pointsmed = 25 - erreur
+	scoremed += pointsmed
+	fmt.Println("vous obtenez :", "\033[92m", pointsmed, "\033[0mpoints !")
+	fmt.Println(" ")
+	fmt.Println("Vous avez :", "\033[92m", scoremed, "\033[0mpoints !")
+	fmt.Println(" ")
+	fmt.Println(" ")
+	medecine = false
+	erreur = 0
+	pointsmed = 0
+	if scoremed >= limitescore {
+		Ending()
+	}
+	time.Sleep(5000 * time.Millisecond)
+	fmt.Println(" ")
+	fmt.Println("Retour au menu principal.")
+	fmt.Println(" ")
+	time.Sleep(2000 * time.Millisecond)
+	ClearTerminal()
+	MenuHangman()
+}

@@ -70,3 +70,13 @@ func MotLong() {
 	mot = motlong
 }
 
+// Assignation à une variable de la liste medecine
+func MotMed() {
+	motmedecine, err := MotAleatoire("docs/motsmedecine.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	mot = motmedecine
+}
+
+

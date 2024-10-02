@@ -211,6 +211,20 @@ func Erreur() {
 			scoreL = 0
 			motslongs = false
 		}
+		if medecine {
+			killmed++
+			time.Sleep(1500 * time.Millisecond)
+			fmt.Println(" ")
+			fmt.Println("\033[1mLe nombre de personnes que vous n'avez pas réussi à sauver s'élève désormais à :", "\033[91m", killmed, "\033[0m")
+			fmt.Println(" ")
+			time.Sleep(1500 * time.Millisecond)
+			fmt.Println("\033[1mVotre score retombe de", "\033[92m", scoremed, "\033[0m", "\033[1mà 0 !\033[0m")
+			fmt.Println(" ")
+			fmt.Println("\033[1mLe mot était :", mot, "\033[0m")
+			fmt.Println(" ")
+			scoremed = 0
+			medecine = false
+		}
 		fmt.Println("\033[1mRetour au menu principal\033[0m")
 		fmt.Println(" ")
 		time.Sleep(5000 * time.Millisecond)

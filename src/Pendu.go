@@ -8,15 +8,14 @@ import (
 
 // Si le joueur à choisi facile, facile passe en true
 var facile = false
-
 // Si le joueur à choisi moyen, moyen passe en true
 var moyen = false
-
 // Si le joueur à choisi difficile, difficile passe en true
 var difficile = false
-
 // Si le joueur à choisi les mots longs, motslongs passe en true
 var motslongs = false
+// Si le joueur à choisi medecine, medecine passe en true
+var medecine = false
 var runes []rune
 var motstock []string
 
@@ -31,6 +30,8 @@ func Pendu() {
 		MotD()
 	} else if motslongs {
 		MotLong()
+	}else if medecine {
+		MotMed()
 	}
 	runes = []rune(mot)
 	lmot := len(mot)
@@ -82,6 +83,8 @@ func Pendu() {
 				ReussiteD()
 			} else if motslongs {
 				ReussiteL()
+			}else if medecine {
+				ReussiteMed()
 			}
 			return
 			// Le mot ( supérieur à 2 lettres ) entré par l'utilisateur ne correspond pas au mot recherché
@@ -124,5 +127,7 @@ func Pendu() {
 		ReussiteD()
 	} else if motslongs {
 		ReussiteL()
+	}else if medecine {
+		ReussiteMed()
 	}
 }

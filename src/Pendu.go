@@ -49,6 +49,7 @@ func Pendu() {
 	dejafait := false
 	Underscore()
 	Help()
+	Prenom()
 	//Boucle qui continue tant que motstock ne correspondra pas au mot
 	for !strings.Contains(strings.Join(motstock, ""), mot) {
 		dejafait = false

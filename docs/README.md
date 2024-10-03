@@ -3,8 +3,8 @@
 ## Pour lancer le jeu
 
 - Dans un terminal tapez "git clone https://github.com/Linijarae/Hangman.git"
-- Taper "cd Hangman"
-- Lancer le programme en tapant "go run ."
+- Tapez "cd Hangman"
+- Lancez le programme en tapant "go run ."
 - Amusez-vous avec les différents modes de jeu !!
 
 *Pour ouvrir un terminal, tapez cmd dans la barre de recherche de votre ordinateur et ouvrez "Invite de commandes"*
@@ -13,6 +13,7 @@
 
 - Ce jeu utilise le langage Golang
 - Chaque fonction possède son commentaire décrivant son utilité.
+- Tout l'ASCII art à été réalisé manuellement en utilisant les symboles claviers (ALT + Nombre)
 
 ## Le développeur
 

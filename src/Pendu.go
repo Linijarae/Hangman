@@ -119,7 +119,6 @@ func Pendu() {
 		if !correcte && len(input) == 1 && !dejafait {
 			fmt.Println(" ")
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
-			fmt.Println(" ")
 			time.Sleep(1500 * time.Millisecond)
 			//Ajout de la lettre rouge (car incorrecte) dans le stock de lettre
 			inputstock = append(inputstock, redinput)

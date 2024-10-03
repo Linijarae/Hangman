@@ -16,6 +16,8 @@
 
 - DUPIN Alexis
 
+## Temps de réalisation du jeu
+
 ### Date de début
 - Lundi 23 Septembre 2024
 

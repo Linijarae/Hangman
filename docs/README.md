@@ -2,38 +2,47 @@
 
 ## Pour lancer le jeu
 
-- Dans un terminal tapez "git clone https://github.com/Urgalute/Projet_Red.git"
-- Taper "cd Projet_Red"
+- Dans un terminal tapez "git clone https://github.com/Linijarae/Hangman.git"
+- Taper "cd Hangman"
 - Lancer le programme en tapant "go run ."
-- Amusez-vous !!
+- Amusez-vous avec les différents modes de jeu !!
 
 ## Informations techniques
 
 - Ce jeu utilise le langage Golang
-- [Trello](https://trello.com/b/L2GIWD9y/projet-red)
+- Chaque fonction possède son commentaire décrivant son utilité.
 
-## Les développeurs
+## Le développeur
 
 - DUPIN Alexis
-- LE PIVER Lilian
-- COMMEAU Yoan
-
-**Et un grand merci au mentors pour leur aide et leurs conseils, ainsi que pour ces 3 semaines d'Ymmersion**
-
-- MEDERREG Kheir-eddine
-- RODRIGUES Cyril
-- PHILIPIERT Alan
-
-## Temps de réalisation du projet
 
 ### Date de début
-- Mercredi 11 Septembre 2024
+- Lundi 23 Septembre 2024
 
 ### Date de fin
-- Vendredi 20 Septembre 2024
+- Vendredi 4 Octobre 2024
 
-### ~45h au total 
+### ≈30h au total 
 
 ## Base du thème 
 
-- **Un livre dont vous êtes le héros**
+- **Réalisation d'un pendu**
+
+
+## Explication des points
+
+- Facile : Ce mode vous accordera 10 points moins le nombre de vos erreurs
+- Moyen : Ce mode vous accordera 12 points moins le nombre de vos erreurs
+- Difficile : Ce mode vous accordera 15 points moins le nombre de vos erreurs
+- Spécial : Ce mode vous accordera 25 points moins le nombre de vos erreurs
+    ||
+    == Les listes spéciales contiennent des thèmes s'appliquant au mot à deviner.
+
+## Explication de l'aide
+
+- Tout mot de longueur inférieure ou égal à 5 vous accordera l'affichage 
+  d'une lettre aléatoire toutes les fois où elle apparaît dans le mot
+- Tout mot de longueur supérieure à 5 et inférieur ou égal à 8 vous accordera l'affichage 
+  de 2 lettres aléatoires toutes les fois où elles apparaîssent dans le mot
+- Tout mot de longueur supérieure à 8 vous accordera l'affichage 
+  de 3 lettres aléatoires toutes les fois où elles apparaîssent dans le mot

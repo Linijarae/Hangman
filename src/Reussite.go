@@ -33,7 +33,6 @@ func ReussiteF() {
 	fmt.Println("Retour au menu principal.")
 	fmt.Println(" ")
 	time.Sleep(2000 * time.Millisecond)
-	ClearTerminal()
 	MenuHangman()
 }
 
@@ -65,7 +64,6 @@ func ReussiteM() {
 	fmt.Println("Retour au menu principal.")
 	fmt.Println(" ")
 	time.Sleep(2000 * time.Millisecond)
-	ClearTerminal()
 	MenuHangman()
 }
 
@@ -97,7 +95,6 @@ func ReussiteD() {
 	fmt.Println("Retour au menu principal.")
 	fmt.Println(" ")
 	time.Sleep(2000 * time.Millisecond)
-	ClearTerminal()
 	MenuHangman()
 }
 
@@ -129,7 +126,6 @@ func ReussiteL() {
 	fmt.Println("Retour au menu principal.")
 	fmt.Println(" ")
 	time.Sleep(2000 * time.Millisecond)
-	ClearTerminal()
 	MenuHangman()
 }
 
@@ -161,6 +157,5 @@ func ReussiteMed() {
 	fmt.Println("Retour au menu principal.")
 	fmt.Println(" ")
 	time.Sleep(2000 * time.Millisecond)
-	ClearTerminal()
 	MenuHangman()
 }

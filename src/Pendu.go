@@ -55,13 +55,15 @@ func Pendu() {
 		ClearTerminal()
 		//Affichage du schéma du pendu.
 		Erreur()
-		fmt.Println(" ")
-		fmt.Println("\033[4m\033[93mLe mot actuel :\033[0m", strings.Join(motstock, " "))
-		fmt.Println(" ")
-		fmt.Println("\033[4m\033[93mVous avez utilisé les lettres :\033[0m", inputstock)
-		fmt.Println(" ")
-		fmt.Println("\033[4m\033[93mVous avez tenté les mots :\033[0m", inputstockmot)
-		fmt.Println(" ")
+		fmt.Println("║► \033[93mLe mot actuel :\033[0m", strings.Join(motstock, " "))
+		fmt.Println("╠════════════════════════════════════════════════════════════■")
+		fmt.Println("║► \033[93mVous avez utilisé les lettres :\033[0m", inputstock)
+		fmt.Println("╠════════════════════════════════════════════════════════════■")
+		fmt.Println("║► \033[93mVous avez tenté les mots :\033[0m", inputstockmot)
+		fmt.Println("╠════════════════════════════════════════════════════════════■ ")
+		fmt.Println("║")
+		fmt.Printf("╚══█ \033[4m\033[1mVotre tentative : \033[0m")
+
 		fmt.Scanln(&input)
 		correcte := false
 		//Input incorrecte changée en rouge

@@ -10,8 +10,9 @@ import (
 )
 
 var mot string
+var prenom string
 
-//Séléction d'un mot aléatoire facile
+//Séléction d'un mot aléatoire
 func MotAleatoire(motsfaciles string) (string, error) {
 	file, err := os.Open(motsfaciles)
 	if err != nil {
@@ -79,4 +80,12 @@ func MotMed() {
 	mot = motmedecine
 }
 
+// Assignation à une variable de la liste prénoms pour le prénom du pendu
+func Prenom() {
+	prenomalea, err := MotAleatoire("docs/prenoms.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	prenom = prenomalea
+}
 

@@ -8,7 +8,7 @@ import (
 //Quitter le jeu
 func Quitter() {
 	fmt.Println(" ")
-	fmt.Println("Au revoir !")
+	fmt.Println("Merci d'avoir joué ! Au plaisir de vous revoir !")
 	fmt.Println(" ")
 	os.Exit(0)
 }

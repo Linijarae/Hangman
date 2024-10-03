@@ -7,6 +7,8 @@
 - Lancer le programme en tapant "go run ."
 - Amusez-vous avec les différents modes de jeu !!
 
+*Pour ouvrir un terminal, tapez cmd dans la basse de recherche de votre ordinateur et ouvrez "Invite de commandes"*
+
 ## Informations techniques
 
 - Ce jeu utilise le langage Golang

@@ -7,7 +7,7 @@
 - Lancer le programme en tapant "go run ."
 - Amusez-vous avec les différents modes de jeu !!
 
-*Pour ouvrir un terminal, tapez cmd dans la basse de recherche de votre ordinateur et ouvrez "Invite de commandes"*
+*Pour ouvrir un terminal, tapez cmd dans la barre de recherche de votre ordinateur et ouvrez "Invite de commandes"*
 
 ## Informations techniques
 

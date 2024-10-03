@@ -8,16 +8,21 @@ import (
 
 // Si le joueur à choisi facile, facile passe en true
 var facile = false
+
 // Si le joueur à choisi moyen, moyen passe en true
 var moyen = false
+
 // Si le joueur à choisi difficile, difficile passe en true
 var difficile = false
+
 // Si le joueur à choisi les mots longs, motslongs passe en true
 var motslongs = false
+
 // Si le joueur à choisi medecine, medecine passe en true
 var medecine = false
 var runes []rune
 var motstock []string
+var passe = 0
 
 // Mode de jeu Facile avec un mot de la liste Facile
 func Pendu() {
@@ -30,7 +35,7 @@ func Pendu() {
 		MotD()
 	} else if motslongs {
 		MotLong()
-	}else if medecine {
+	} else if medecine {
 		MotMed()
 	}
 	runes = []rune(mot)
@@ -83,7 +88,7 @@ func Pendu() {
 				ReussiteD()
 			} else if motslongs {
 				ReussiteL()
-			}else if medecine {
+			} else if medecine {
 				ReussiteMed()
 			}
 			return
@@ -101,12 +106,16 @@ func Pendu() {
 		//L'entrée utilisateur correspond à une lettre recherchée ET elle n'a pas encore été essayée
 		for j, r := range runes {
 			if string(r) == input && !dejafait {
+				passe ++
 				motstock[j] = input
 				correcte = true
-				//Ajout de la lettre verte dans le stock de lettre
+				//Ajout de la lettre verte dans le stock de lettre	
+				if passe == 1 {
 				inputstock = append(inputstock, greeninput)
+				}
 			}
 		}
+		passe = 0
 		if !correcte && len(input) == 1 && !dejafait {
 			fmt.Println(" ")
 			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
@@ -127,7 +136,7 @@ func Pendu() {
 		ReussiteD()
 	} else if motslongs {
 		ReussiteL()
-	}else if medecine {
+	} else if medecine {
 		ReussiteMed()
 	}
 }

@@ -31,18 +31,17 @@
 
 ## Explication des points
 
-- Facile : Ce mode vous accordera 10 points moins le nombre de vos erreurs
-- Moyen : Ce mode vous accordera 12 points moins le nombre de vos erreurs
-- Difficile : Ce mode vous accordera 15 points moins le nombre de vos erreurs
-- Spécial : Ce mode vous accordera 25 points moins le nombre de vos erreurs
-    ||
-    == Les listes spéciales contiennent des thèmes s'appliquant au mot à deviner.
+- Facile : Ce mode vous accordera 10 points moins le nombre de vos erreurs.
+- Moyen : Ce mode vous accordera 12 points moins le nombre de vos erreurs.
+- Difficile : Ce mode vous accordera 15 points moins le nombre de vos erreurs.
+- Spécial : Ce mode vous accordera 25 points moins le nombre de vos erreurs. 
+(Les listes spéciales contiennent des thèmes s'appliquant au mot à deviner.)
 
 ## Explication de l'aide
 
 - Tout mot de longueur inférieure ou égal à 5 vous accordera l'affichage 
-  d'une lettre aléatoire toutes les fois où elle apparaît dans le mot
+  d'une lettre aléatoire toutes les fois où elle apparaît dans le mot.
 - Tout mot de longueur supérieure à 5 et inférieur ou égal à 8 vous accordera l'affichage 
-  de 2 lettres aléatoires toutes les fois où elles apparaîssent dans le mot
+  de 2 lettres aléatoires toutes les fois où elles apparaîssent dans le mot.
 - Tout mot de longueur supérieure à 8 vous accordera l'affichage 
-  de 3 lettres aléatoires toutes les fois où elles apparaîssent dans le mot
+  de 3 lettres aléatoires toutes les fois où elles apparaîssent dans le mot.

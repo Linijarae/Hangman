@@ -8,7 +8,7 @@ import (
 //Debut du jeu
 func Start() {
 	fmt.Println(" ")
-	fmt.Println("\033[47m\033[30m                        S U S P E N S I O N S                       \033[0m")
+	fmt.Println("\033[47m\033[30m                        H A N G E D                       \033[0m")
 	time.Sleep(2000 * time.Millisecond)
 	fmt.Println(" ")
 	fmt.Println(" ")

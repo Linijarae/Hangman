@@ -66,6 +66,7 @@ func Pendu() {
 		fmt.Printf("╚══█ \033[4m\033[1mVotre tentative : \033[0m")
 
 		fmt.Scanln(&input)
+		input = strings.ToLower(input)
 		correcte := false
 		//Input incorrecte changée en rouge
 		redinput := "\033[91m" + input + "\033[0m"
@@ -109,12 +110,12 @@ func Pendu() {
 		//L'entrée utilisateur correspond à une lettre recherchée ET elle n'a pas encore été essayée
 		for j, r := range runes {
 			if string(r) == input && !dejafait {
-				passe ++
+				passe++
 				motstock[j] = input
 				correcte = true
-				//Ajout de la lettre verte dans le stock de lettre	
+				//Ajout de la lettre verte dans le stock de lettre
 				if passe == 1 {
-				inputstock = append(inputstock, greeninput)
+					inputstock = append(inputstock, greeninput)
 				}
 			}
 		}

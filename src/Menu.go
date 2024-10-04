@@ -6,6 +6,7 @@ import (
 )
 
 var input string
+//Score à atteindre pour terminer le jeu.
 var limitescore = 150
 
 // Menu du jeu

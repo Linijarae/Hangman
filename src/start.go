@@ -45,7 +45,7 @@ func Start() {
 		fmt.Println("\033[95m\033[1m??????\033[0m - Un pendu pour être plus précis. Mais ce pendu met dans la balance de vraie personnes.")
 		fmt.Println(" ")
 		time.Sleep(850 * time.Millisecond)
-		fmt.Println("\033[95m\033[1m??????\033[0m - Dépassez les 150 points et je vous laisserai vivre. Et peut être même partir.")
+		fmt.Println("\033[95m\033[1m??????\033[0m - Dépassez les",limitescore,"points et je vous laisserai vivre. Et peut être même partir.")
 		fmt.Println(" ")
 		time.Sleep(850 * time.Millisecond)
 		fmt.Println("\033[95m\033[1m??????\033[0m - Vous gagnerez des points par réussite, mais vous en perdrez pour chaque erreur.")

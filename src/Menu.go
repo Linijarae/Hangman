@@ -7,7 +7,7 @@ import (
 
 var input string
 //Score à atteindre pour terminer le jeu.
-var limitescore = 150
+var limitescore = 100
 
 // Menu du jeu
 func MenuHangman() {

@@ -12,7 +12,7 @@ var killmed = 0
 var scoremed = 0
 var pointsmed int
 
-// Statistiques de chaque difficultées
+// Statistiques des listes spéciales
 func StatistiquesSpe() {
 	ClearTerminal()
 	fmt.Println("╔═════════════════════════════════════════════════════════════════╗")

@@ -15,7 +15,7 @@ var killD = 0
 var scoreD = 0
 var pointsD int
 
-// Statistiques de chaque difficultées
+// Statistiques des difficultés facile, moyen et difficile
 func Statistiques() {
 	ClearTerminal()
 	fmt.Println("╔═════════════════════════════════════════════════════════════════╗")

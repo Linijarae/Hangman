@@ -24,7 +24,6 @@ var runes []rune
 var motstock []string
 var passe = 0
 
-// Mode de jeu Facile avec un mot de la liste Facile
 func Pendu() {
 	//Savoir quel niveau le joueur à séléctionné
 	if facile {
@@ -64,7 +63,6 @@ func Pendu() {
 		fmt.Println("╠════════════════════════════════════════════════════════════■ ")
 		fmt.Println("║")
 		fmt.Printf("╚══█ \033[4m\033[1mVotre tentative : \033[0m")
-
 		fmt.Scanln(&input)
 		input = strings.ToLower(input)
 		correcte := false
@@ -75,7 +73,7 @@ func Pendu() {
 		for _, a := range inputstock {
 			if a == redinput || a == greeninput {
 				fmt.Println(" ")
-				fmt.Println("\033[91mVous avez déjà essayé cette lettre.\033[0m")
+				fmt.Println("\033[91m\033[1mVous avez déjà essayé cette lettre.\033[0m")
 				fmt.Println(" ")
 				dejafait = true
 				time.Sleep(1500 * time.Millisecond)
@@ -99,7 +97,7 @@ func Pendu() {
 			// Le mot ( supérieur à 2 lettres ) entré par l'utilisateur ne correspond pas au mot recherché
 		} else if mot != input && len(input) > 1 {
 			fmt.Println(" ")
-			fmt.Println("\033[91mCe n'est pas le bon mot !\033[0m")
+			fmt.Println("\033[91m\033[1mCe n'est pas le bon mot !\033[0m")
 			fmt.Println(" ")
 			time.Sleep(1500 * time.Millisecond)
 			//Un mot faux c'est 2 erreurs en plus
@@ -113,16 +111,17 @@ func Pendu() {
 				passe++
 				motstock[j] = input
 				correcte = true
-				//Ajout de la lettre verte dans le stock de lettre
+				//Ajout de la lettre verte dans le stock de lettre, ajout d'une variable passe, pour n'afficher la lettre qu'une seule fois si elle est présente plusieurs fois.
 				if passe == 1 {
 					inputstock = append(inputstock, greeninput)
 				}
 			}
 		}
 		passe = 0
+		// La lettre n'est pas bonne, et elle n'a pas déjà été tentée.
 		if !correcte && len(input) == 1 && !dejafait {
 			fmt.Println(" ")
-			fmt.Println("\033[91mLa lettre ne fait pas partie du mot !\033[0m")
+			fmt.Println("\033[91m\033[1mLa lettre ne fait pas partie du mot !\033[0m")
 			time.Sleep(1500 * time.Millisecond)
 			//Ajout de la lettre rouge (car incorrecte) dans le stock de lettre
 			inputstock = append(inputstock, redinput)
